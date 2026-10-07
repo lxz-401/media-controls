@@ -1,5 +1,7 @@
 // Utils only used in the extension. Do not import this file in the preferences window because Shell is not available there.
 
+import Clutter from "gi://Clutter";
+import St from "gi://St";
 import GLib from "gi://GLib";
 import Soup from "gi://Soup";
 import Shell from "gi://Shell";
@@ -178,3 +180,9 @@ export const createDbusProxy = async (ifaceInfo, name, object) => {
     );
     return proxy;
 };
+
+/** Vertical layout parameters for GNOME 48+ and the supported older shells. */
+export const verticalLayout = () =>
+    "orientation" in St.BoxLayout.prototype
+        ? { orientation: Clutter.Orientation.VERTICAL }
+        : { vertical: true };

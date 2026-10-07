@@ -2,6 +2,9 @@
 
 Show controls and information of the currently playing media in the panel.
 
+This fork supports GNOME Shell 46–51. On GNOME 48 and later, vertical
+layouts use `Clutter.Orientation`; GNOME 46–47 keep the legacy layout property.
+
 ## Features
 
 - Customize the extension the way you want it
@@ -65,9 +68,10 @@ This project uses pnpm for package management and script execution. Make sure yo
 
 1. Clone the repository
 2. Install dependencies: `pnpm install`
-3. Build and install: `pnpm reinstall`
-4. Enable the extension: `pnpm run enable`
-5. Open preferences to test: `pnpm run prefs`
+3. Build and install: `pnpm build && pnpm run ext:install`
+4. Log out and log back in if GNOME Shell has already loaded an older copy.
+5. Enable the extension: `pnpm run ext:enable`
+6. Open preferences to test: `pnpm run ext:prefs`
 
 For active development, use `pnpm reload` (X11) or `pnpm debug` (Wayland) to test changes.
 

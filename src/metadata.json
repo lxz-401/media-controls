@@ -2,9 +2,9 @@
   "uuid": "mediacontrols@cliffniff.github.com",
   "name": "Media Controls",
   "description": "Show controls and information of the currently playing media in the panel.",
-  "url": "https://github.com/cliffniff/media-controls",
+  "url": "https://github.com/lxz-401/media-controls",
   "settings-schema": "org.gnome.shell.extensions.mediacontrols",
   "gettext-domain": "mediacontrols@cliffniff.github.com",
-  "version-name": "2.4.5",
-  "shell-version": ["46", "47", "48", "49", "50"]
+  "version-name": "2.4.5-gnome51",
+  "shell-version": ["46", "47", "48", "49", "50", "51"]
 }
